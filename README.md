@@ -32,6 +32,8 @@ export PATH=$JAVA_HOME/bin:$SPARK_HOME/bin:$SCALA_HOME/bin:$PATH
 # Submission
 ## Screenshot
 ![consumer](img/kafka-consumer-console.png)
+![report](img/kafka-report.png)
+![spark-ui](img/spark-ui.png)
 
 ## Answers
 - How did changing values on the SparkSession property parameters affect the throughput and latency of the data?

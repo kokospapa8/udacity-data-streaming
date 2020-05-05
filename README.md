@@ -36,9 +36,15 @@ export PATH=$JAVA_HOME/bin:$SPARK_HOME/bin:$SCALA_HOME/bin:$PATH
 ![spark-ui](img/spark-ui.png)
 
 ## Answers
-- How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+### How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
+[ref](https://spark.apache.org/docs/latest/configuration.html)
+Higher value in following variable in report means better trhoughput and latency
+- inputRowsPerSecond
+- processedRowsPerSecond 
 
-- What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
+### What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 
+- spark.default.parallelism = 2 # since there are 2cpu with one core on local machine
+- spark.streaming.kafka.maxRatePerPartition = 10
 
-
+`inputRowsPerSecond` and `processedRowsPerSecond` value was most highest I could find out.

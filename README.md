@@ -32,7 +32,7 @@ export PATH=$JAVA_HOME/bin:$SPARK_HOME/bin:$SCALA_HOME/bin:$PATH
 # Submission
 ## Screenshot
 ![consumer](img/kafka-consumer-console.png)
-![report](img/kafka-report.png)
+![report](img/kafak-report.png)
 ![spark-ui](img/spark-ui.png)
 
 ## Answers

@@ -29,6 +29,26 @@ export SCALA_HOME=/usr/local/scala/
 export PATH=$JAVA_HOME/bin:$SPARK_HOME/bin:$SCALA_HOME/bin:$PATH
 ```
 
+## Instruction
+### Run Kafka and zookeeper
+```
+/usr/bin/zookeeper-server-start zookeeper.properties
+/usr/bin/kafka-server-start producer.properties
+```
+### Run kafka producer
+```
+python kafka_server.py
+```
+### Run Kafka consumer console
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:"service.call.police" --topic <your-topic-name> --from-beginning
+```
+### Run Spark with UI
+```
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] --conf spark.ui.port=3000 data_stream.py
+```
+
+
 # Submission
 ## Screenshot
 ![consumer](img/kafka-consumer-console.png)
